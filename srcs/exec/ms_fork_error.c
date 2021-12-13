@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ms_fork_error.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: mafortin <mafortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 11:29:06 by mafortin          #+#    #+#             */
-/*   Updated: 2021/10/26 09:35:23 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/12/01 14:01:17 by mafortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ms_nosuchfile(char *cmd)
 	ft_putstr_fd("Minishell: ", 1);
 	ft_putstr_fd(cmd, 1);
 	ft_putendl_fd(": No such file or directory", 1);
-	exit (127U);
+	g_ms.exit = 127;
 }
 
 void	ms_cmdnotfound(char *cmd)
@@ -27,7 +27,7 @@ void	ms_cmdnotfound(char *cmd)
 	ft_putstr_fd("Minishell: ", 1);
 	ft_putstr_fd(cmd, 1);
 	ft_putendl_fd(": Command not found", 1);
-	exit (127U);
+	g_ms.exit = 127;
 }
 
 bool	ms_pid_error(void)

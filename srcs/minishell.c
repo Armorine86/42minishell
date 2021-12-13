@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: mafortin <mafortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 18:25:12 by mafortin          #+#    #+#             */
-/*   Updated: 2021/11/30 08:28:11 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/11/30 15:48:37 by mafortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void	ms_readline_loop(t_job *job_head)
 		}
 		add_history(input);
 		job_head = parse_input(input, job_head);
-		free (input);
+		free(input);
 		if (job_head)
 			ms_exec_main(job_head);
 		ms_free_job(job_head);

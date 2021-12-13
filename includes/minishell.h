@@ -6,7 +6,7 @@
 /*   By: mafortin <mafortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 15:01:34 by mafortin          #+#    #+#             */
-/*   Updated: 2021/11/15 10:46:44 by mafortin         ###   ########.fr       */
+/*   Updated: 2021/11/30 15:34:57 by mafortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ typedef struct s_job
 	int				hdoc_fd[2];
 	pid_t			pid;
 	int				status;
+	char			*input;
 	struct s_job	*next;
 }			t_job;
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ms_job_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: mafortin <mafortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 09:49:51 by mafortin          #+#    #+#             */
-/*   Updated: 2021/11/11 12:52:21 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/11/30 15:45:16 by mafortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,9 @@ void	ms_free_value(t_job *current)
 void	ms_free_job(t_job *job_head)
 {	
 	t_job	*save;
+	int		start;
 
+	start = 0;
 	if (!job_head)
 		return ;
 	while (job_head != NULL)
@@ -78,6 +80,7 @@ void	ms_free_job(t_job *job_head)
 		ms_free_value(save);
 		free(save);
 		save = NULL;
+		start++;
 	}
 	job_head = NULL;
 }

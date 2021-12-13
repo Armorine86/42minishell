@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ms_pipe.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mmondell <mmondell@student.42quebec.com    +#+  +:+       +#+        */
+/*   By: mafortin <mafortin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/21 11:29:54 by mafortin          #+#    #+#             */
-/*   Updated: 2021/11/30 14:28:29 by mmondell         ###   ########.fr       */
+/*   Updated: 2021/11/30 15:27:00 by mafortin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	ms_pipe_exec(t_job *current, t_pipe *data, int index, t_job *job_head)
 	if (ret == true)
 	{
 		if (ms_check_builtin(current) == false)
-			ms_fork(current);
+			ms_fork(current, job_head);
 	}
 	ms_free_fork(job_head);
 	exit(g_ms.exit);
